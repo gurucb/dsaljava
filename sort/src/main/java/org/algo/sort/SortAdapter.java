@@ -28,27 +28,19 @@ public class SortAdapter {
             case 5:
                 sortAlgorithm = new QuickSort();
                 break;
-          
+           
             default:
                 System.out.println("Invalid choice. Using Bubble Sort as the default algorithm.");
                 sortAlgorithm = new BubbleSort();
         }
 
-        Thread sortingThread = new Thread(() -> {
-            long startTime = System.currentTimeMillis();
+               
+        long startTime = System.currentTimeMillis();
             sortAlgorithm.sort(inputFile, outputFile);
             long endTime = System.currentTimeMillis();
             long executionTime = endTime - startTime;
 
-            System.out.println("Sorting completed. Execution time: " + executionTime + " milliseconds.");
-        });
-
-        sortingThread.start();
-        try {
-            sortingThread.join();
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-        }
+        System.out.println("Sorting completed. Execution time: " + executionTime + " nanoseconds.");
     }
 }
 
