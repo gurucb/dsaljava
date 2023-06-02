@@ -5,12 +5,17 @@ public class BubbleSort extends Sort{
     public int[] sort(int[] inputElements) {
       int n=inputElements.length;
         for(int i=0;i<n;i++){
+            boolean sorted=false;
             for(int j=1;j<n-i-1;j++){
                 if(inputElements[j]>inputElements[j+1]){
                     int temp=inputElements[j];
                     inputElements[j]=inputElements[j+1];
                     inputElements[j+1]=temp;
+                    sorted=true;
                 }
+            }
+            if(sorted==false){
+            break;
             }
         }
 
