@@ -1,10 +1,10 @@
 package org.algo.sort;
 
-interface ISort {
+public interface ISort {
 
-    public int [] sort(int [] inputElements);
+    int [] sort(int [] inputElements);
 
-    public void sort(String inputFile, String outputFile);
+    void sort(String inputFile, String outputFile);
 
 
 }
