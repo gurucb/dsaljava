@@ -1,7 +1,6 @@
 package org.algo.sort;
 
-public class MergeSort extends Sort {
-
+public class MergeSort extends Sort{
     @Override
     public int[] sort(int[] inputElements) {
         return new int[0];
