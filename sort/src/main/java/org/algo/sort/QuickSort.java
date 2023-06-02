@@ -3,7 +3,7 @@ package org.algo.sort;
 public class QuickSort extends Sort{
     @Override
     public int[] sort(int[] inputElements) {
-        return new int[0];
+        return inputElements;
     }
 
     @Override
