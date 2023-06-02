@@ -1,42 +1,24 @@
 package org.algo.sort;
 
 public class SortAdapter {
-    public static Sort getSortObject(String sortType)
-    {
-        if(sortType.equals("BubbleSort")){
-           return new BubbleSort();
-       }
-
-        if(sortType.equals("BucketSort")){
-            return new BucketSort();
+    public static Sort getSortObject(String sortType) {
+        if (sortType == "BubbleSort") {
+            Sort sort = new BubbleSort();
+            return sort;
         }
-
-        if(sortType.equals("HeapSort")){
-            return new HeapSort();
+        else if (sortType=="SelectionSort")
+        {Sort sort=new SelectionSort();
+            return sort;
         }
-
-        if(sortType.equals("InsertionSort")){
-            return new InsertionSort();
+        else if (sortType=="InsertionSort") {
+            Sort sort=new InsertionSort();
+            return sort;
         }
+        else if (sortType=="ShellSort") {
+            Sort sort=new ShellSort();
+            return sort;
 
-        if(sortType.equals("MergeSort")){
-            return new MergeSort();
         }
-
-        if(sortType.equals("QuickSort")){
-            return new QuickSort();
-        }
-
-        if(sortType.equals("SelectionSort")){
-            return new SelectionSort();
-        }
-
-        if(sortType.equals("ShellSort")){
-            return new ShellSort();
-        }
-
-
-        return new MergeSort();
-    
+        return null;
     }
 }
