@@ -6,13 +6,13 @@ public class InsertionSort extends Sort{
     public int[] sort(int[] inputElements) {
          int n = inputElements.length;
         for (int j = 1; j < n; j++) {
-            int key = inputElements[j];
+            int temp = inputElements[j];
             int i = j-1;
-            while((i > -1) && ( inputElements [i] > key)) {
+            while((i >=0) {
                 inputElements [i+1] = inputElements [i];
                 i--;
             }
-            inputElements[i+1] = key;
+            inputElements[i+1] = temp;
         }
 
         return inputElements;
